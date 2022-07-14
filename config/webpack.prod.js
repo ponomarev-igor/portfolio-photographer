@@ -23,8 +23,8 @@ if (!pugPages.length) {
 			'indent_size': 3
 		},
 		replace: [
-			{ regex: '../img', to: 'img' },
-			{ regex: '@img', to: 'img', },
+			{ regex: '../img', to: 'image' },
+			{ regex: '@img', to: 'image', },
 			{ regex: 'NEW_PROJECT_NAME', to: rootFolder }
 		],
 	})]
@@ -70,7 +70,7 @@ const config = {
 							modules: false,
 							url: {
 								filter: (url, resourcePath) => {
-									if (url.includes("img") || url.includes("fonts")) {
+									if (url.includes("image") || url.includes("fonts")) {
 										return false;
 									}
 									return true;
@@ -96,7 +96,7 @@ const config = {
 						loader: 'string-replace-loader',
 						options: {
 							search: '@img',
-							replace: 'img',
+							replace: 'image',
 							flags: 'g'
 						}
 					}

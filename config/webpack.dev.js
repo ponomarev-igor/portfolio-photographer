@@ -21,8 +21,8 @@ if (!pugPages.length) {
 		},
 		replace: [
 			{ regex: '<link rel="stylesheet" href="css/style.min.css">', to: '' },
-			{ regex: '../img', to: 'img' },
-			{ regex: '@img', to: 'img' },
+			{ regex: '../img', to: 'image' },
+			{ regex: '@img', to: 'image' },
 			{ regex: 'NEW_PROJECT_NAME', to: rootFolder }
 		],
 	})];
@@ -115,7 +115,7 @@ const config = {
 						loader: 'string-replace-loader',
 						options: {
 							search: '@img',
-							replace: 'img',
+							replace: 'image',
 							flags: 'g'
 						}
 					}
